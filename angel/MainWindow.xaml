@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="107*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn_Calculate" Click="btnCalculate_click" Grid.Column="1" Content="Решение" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="47" Width="119"/>
+        <ListBox x:Name="lb_calc" Grid.Column="2" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" Margin="0,106,10,0" Grid.RowSpan="2"/>
+        <ListBox x:Name="lb_num" Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" Margin="0,83,0,28" Grid.RowSpan="2"/>
+        <Label Grid.Column="2" Content="Числа от -100 до 100" HorizontalAlignment="Left" Margin="137,56,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="2" Content="Кол-во чётных и нечётных числе" HorizontalAlignment="Left" Margin="104,78,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.144,0.466" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tb_do" HorizontalAlignment="Center" Margin="0,73,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_ot" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>
