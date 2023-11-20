@@ -32,6 +32,7 @@ namespace angel
         {
             if (int.TryParse(tb_ot.Text, out int A) && int.TryParse(tb_do.Text, out int B))
             {
+                lab_intervel.Content = $"Числа от {A} до {B}";
                 int evenCount = 0;
                 int oddCount = 0;
                 int[] array = (GenerateRandom.GenerateRandomArray(A, B));
@@ -51,9 +52,22 @@ namespace angel
                         oddCount++; // Увеличиваем счетчик нечетных чисел
                     }
                 }
+                for (int j = 0; j < array.Length; j++)
+                {
+                    lb_num.Items.Add(array[j]);
+                }
 
                 lb_calc.Items.Add($"Количество четных чисел: {evenCount}\r\nКоличество нечетных чисел: {oddCount}");
             }         
-        }          
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            lb_num.Items.Clear();
+            lb_calc.Items.Clear();
+            tb_ot.Text = "";
+            tb_do.Text = ""; 
+            numbers.Clear();
+        }
     }
 }

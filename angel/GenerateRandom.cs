@@ -10,16 +10,35 @@ namespace angel
     {
         public static int[] GenerateRandomArray(int min, int max)
         {
-            Random random = new Random();
-            int min2 = Math.Abs(min);
-            int max2 = Math.Abs(max);   
-            int count = min2 + max;
-            int[] array = new int[count];
-            for (int i = 0; i < count ; i++)
+            if (min <= 0)
             {
-                array[i] = min++;
+                int count = 0;
+                for (int j = min; j <= max; j++)
+                {
+                    count++;
+                }               
+                int[] array = new int[count];
+                for (int i = 0; i < count; i++)
+                {
+                    array[i] = min++;
+                }
+                return array;
             }
-            return array;
+            else
+            {
+                int count = 0;
+                for (int j = min; j <= max; j++)
+                {
+                    count++;
+                }
+                int[] array = new int[count];
+                for (int i = 0; i < count; i++)
+                {
+                    array[i] = min++;
+                }
+                return array;
+            }
+            
         }
     }
 }
