@@ -30,6 +30,8 @@
         <Label Content="от" HorizontalAlignment="Center" Margin="0,111,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
         <Label Content="до" HorizontalAlignment="Left" Margin="94,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="32"/>
         <Button x:Name="btnClear" Click="btnClear_Click" Grid.Column="1" Content="Очистить" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="47" Width="119"/>
+        <Button x:Name="btn_Info" Click="btnInfo_Click" Grid.Column="3" Content="О программе" HorizontalAlignment="Center" Margin="0,15,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Exit" Click = "btnExit_Click"  Grid.Column="3" Content="Выход" HorizontalAlignment="Center" Margin="0,54,0,0" Grid.Row="3" VerticalAlignment="Top" Width="78"/>
 
     </Grid>
 </Window>

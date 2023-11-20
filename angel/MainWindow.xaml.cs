@@ -69,5 +69,10 @@ namespace angel
             tb_do.Text = ""; 
             numbers.Clear();
         }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
